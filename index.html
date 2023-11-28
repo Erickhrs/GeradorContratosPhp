@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Contratos</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Gerador de Contratos</h1>
+        <form action="generate.php" method="get">
+            <form>
+
+                <label for="freelanceName">Nome Completo do Freelance</label>
+                <input type="text" name="freelanceName" placeholder="Informe o nome completo do Freelance">
+
+                <label for="freelanceProfession">Profissão do Freelance</label>
+                <input type="text" name="freelanceProfession" placeholder="Ex: Desenvolvedor, Designer, etc.">
+
+                <label for="freelanceRG">Número de Identidade (RG) do Freelance</label>
+                <input type="text" name="freelanceRG" placeholder="Informe o número do RG do Freelance">
+
+                <label for="clientName">Nome Completo do Cliente</label>
+                <input type="text" name="clientName" placeholder="Informe o nome completo do Cliente">
+
+                <label for="clientRG">Número de Identidade (RG) do Cliente</label>
+                <input type="text" name="clientRG" placeholder="Informe o número do RG do Cliente">
+
+                <label for="contractDate">Data de Assinatura do Contrato</label>
+                <input type="text" name="contractDate">
+
+                <label for="servicesDetails">Detalhes dos Serviços Contratados</label>
+                <textarea name="servicesDetails"
+                    placeholder="Descreva detalhadamente os serviços a serem prestados"></textarea>
+
+                <label for="contractPrice">Valor Acordado no Contrato ($)</label>
+                <input type="text" name="contractPrice" placeholder="Informe o valor acordado no contrato">
+
+                <label for="paymentType">Tipo de Pagamento (horário, mensal, contrato)</label>
+                <select name="paymentType">
+                    <option value="horario">Pagamento por Hora</option>
+                    <option value="mensal">Pagamento Mensal</option>
+                    <option value="contrato">Pagamento para Todo o Contrato</option>
+                </select>
+
+                <label for="paymentMethod">Forma de Pagamento</label>
+                <input type="text" name="paymentMethod" placeholder="Ex: Transferência Bancária, Pix, PayPal, etc.">
+
+                <label for="paymentLimitDate">Data Limite para Pagamento</label>
+                <input type="text" name="paymentLimitDate">
+
+                <label for="acceptedPaymentMethods">Formas de Pagamento Aceitas</label>
+                <input type="text" name="acceptedPaymentMethods" placeholder="Ex: Dinheiro, Cartão de Crédito, etc.">
+
+                <label for="paymentTime">Prazo para Pagamento</label>
+                <input type="text" name="paymentTime" placeholder="Ex: 15 dias a partir da data de entrega">
+
+                <label for="contractEndDate">Data Acordada para o Término do Contrato</label>
+                <input type="text" name="contractEndDate">
+
+                <label for="contractorCPF">CPF do CONTRATANTE</label>
+                <input type="text" name="contractorCPF" placeholder="Informe o CPF do CONTRATANTE">
+
+                <label for="contractorAddress">Endereço do CONTRATANTE</label>
+                <textarea name="contractorAddress" placeholder="Informe o endereço completo do CONTRATANTE"></textarea>
+
+                <label for="contracteeCPF">CPF do CONTRATADO</label>
+                <input type="text" name="contracteeCPF" placeholder="Informe o CPF do CONTRATADO">
+
+                <label for="contracteeAddress">Endereço do CONTRATADO</label>
+                <textarea name="contracteeAddress" placeholder="Informe o endereço completo do CONTRATADO"></textarea>
+
+                <label for="cityAndDate">Cidade e Data de Assinatura</label>
+                <input type="text" name="cityAndDate" placeholder="Ex: São Paulo, 27 de Novembro de 2023">
+
+                <button type="button" onclick="buttonClicked()">Gerar Contrato</button>
+
+            </form>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
